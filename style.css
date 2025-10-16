@@ -1,0 +1,777 @@
+@font-face {
+    font-family: Instrument Sans;
+    src: url(assets/fonts/InstrumentSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Anek Tamil;
+    src: url(assets/fonts/AnekTamil-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Geist;
+    src: url(assets/fonts/Geist-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Geist Mono;
+    src: url(assets/fonts/GeistMono-VariableFont_wght.ttf);
+}
+
+@keyframes slideDownFadeIn {
+    0% {
+
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 250px;
+    }
+}
+
+@keyframes slideDownFadeOut {
+    0% {
+        max-height: 250px;
+
+    }
+
+    100% {
+
+       max-height: 0;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body,
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    gap: 1px;
+    color: #000;
+}
+
+/* body > *{
+    overflow: hidden;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Anek Tamil;
+    text-transform: uppercase;
+
+}
+
+a {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #000;
+    font-family: Geist Mono;
+}
+
+a.buttonA {
+    margin: 0;
+    padding: 12px 17px;
+    border-radius: 7.25px;
+    background-color: transparent;
+    transition: all 250ms ease-in-out;
+}
+
+a.buttonA:hover {
+    background-color: #000 !important;
+    color: #fff;
+}
+
+p {
+    font-family: Geist;
+    font-size: 17px;
+    line-height: 131%;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #E9ECFF;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid #000;
+    
+}
+
+.navContents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navContents .logo {
+    display: flex;
+    align-items: center;
+    font-family: Instrument Sans;
+}
+
+.navContents .logo .imgContainer {
+    width: 43.41px;
+    height: 25.78px;
+}
+
+.navContents .logo .imgContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.navContents .logo p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+
+.navContents .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navContents .links a {
+    margin-right: 60px;
+}
+
+.navContents .links a.buttonA {
+    background-color: #808CFD;
+    margin: 0;
+}
+
+.navContents a.plus {
+    display: none;
+    min-width: 32px;
+    height: 32px;
+}
+
+.navContents a.plus img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+h1 {
+    font-weight: 900;
+    font-size: 116px;
+    letter-spacing: -6px;
+    line-height: 110%;
+}
+
+h1 span {
+    color: #808CFD;
+}
+
+header,
+.banner {
+    padding: 101px 20px 20px;
+    background-color: #fff;
+}
+
+
+main div {
+    display: flex;
+}
+
+main .textPanel {
+    display: flex;
+    flex-direction: column;
+    background-color: #E9ECFF;
+    padding: 20px 20px 66px;
+}
+
+main .textPanel h2 {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 91%;
+    flex-grow: 1;
+    letter-spacing: -2px;
+}
+
+
+
+.heroSection .image {
+    width: 66.6667%;
+}
+
+.heroSection .image img {
+    width: 100%;
+    height: 100%;
+}
+
+main .textPanel {
+    width: calc(33.3333% - 40px);
+}
+
+.heroSection .textPanel .body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.heroSection .textPanel .body p {
+    width: calc(100% - 11px);
+}
+
+
+.guidedBySection {
+    gap: 1px;
+}
+
+
+.guidedBySection .image {
+    width: calc(33.3333%);
+}
+
+.guidedBySection .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.guidedBySection .shorterP p {
+    margin-bottom: 22.27px;
+}
+
+.banner {
+    padding: 10px 20px 0;
+}
+
+.textPanelContainer.textPanel {
+    flex-direction: column;
+    width: calc(33.3333%);
+    padding: 0;
+}
+
+.textPanelContainer .textPanel {
+    width: calc(100% - 40px);
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    gap: 6px;
+}
+
+.textPanelContainer .textPanel:first-child {
+    padding: 40px 20px;
+}
+
+.textPanelContainer .textPanel:last-child {
+    border-bottom: none;
+}
+
+.textPanelContainer .textPanel h3 {
+    font-size: 25px;
+    line-height: 91%;
+}
+
+.textPanelContainer .textPanel p {
+    width: inherit;
+}
+
+.discoverPotentialSection .image {
+    width: 66.6667%;
+    max-height: 600px;
+}
+
+.discoverPotentialSection .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.callToActionSection {
+    background-color: #808CFD;
+    padding: 162px 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.callToActionSection .callToAction {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.callToActionSection .callToAction h3 {
+    font-size: 57px;
+    letter-spacing: -3px;
+    line-height: calc(100% - 3.275px);
+}
+
+.callToActionSection .callToAction a.buttonA {
+    background-color: #E9ECFF;
+    width: max-content !important;
+}
+
+footer {
+    background-color: #E9ECFF;
+    padding: 27px 20px 50px;
+}
+
+footer .footerContent {
+    display: flex;
+    flex-direction: column;
+    gap: 169px;
+}
+
+footer .footerContent .footerHeader,
+footer .footerContent .footerBottom {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.footerHeader .logoContainer {
+    width: 229.31px;
+    height: 136.17px;
+}
+
+.footerHeader .logoContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.footerHeader .wordMark p {
+    font-size: 52.43px;
+    font-family: Instrument Sans;
+    letter-spacing: -3px;
+}
+
+.footerBottom div.block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footerBottom div.block p.h5 {
+    text-transform: uppercase;
+    font-family: Anek Tamil;
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+
+.footerBottom .contactBlock .content div {
+    display: flex;
+    gap: 1px;
+}
+
+.footerBottom .openingHours .hoursList>* {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.hoursList>*>p:last-child {
+    white-space: pre;
+}
+
+.footerBottom div.block p {
+    font-size: 14px;
+}
+
+.footerBottom .socialContent .socialList {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialList a {
+    font-size: 14px;
+    font-family: Geist;
+    text-decoration: underline;
+}
+
+.aboutHS .textPanel {
+    width: calc(66.6667% - 40px);
+    background-color: #808CFD;
+
+}
+
+.aboutHS .textPanel h2 {
+    width: 63%;
+}
+
+.aboutHS .textPanel .body h5 {
+    font-size: 22px;
+    line-height: 131%;
+}
+
+.aboutHS .image {
+    width: 33.3333%;
+    height: 480px;
+}
+
+.aboutHS2 .image {
+    height: 480px;
+}
+
+.aboutSec .heroSection .image img {
+    object-fit: cover;
+}
+
+.aboutSec .heroSection .textPanel {
+    padding: 30px 20px;
+}
+
+.aboutSec .imgContainer {
+    width: 100%;
+    height: 480px;
+}
+
+.aboutSec .imgContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutSec .imgContainer img:last-child {
+    display: none;
+}
+
+
+.aboutSec .callToActionSection {
+    background-color: #E9ECFF;
+}
+
+.aboutSec .callToActionSection .callToAction a.buttonA {
+    background-color: #808CFD;
+}
+
+
+.reserveSec .guidedBySection .textPanel {
+    height: 450px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+
+.reserveSec .guidedBySection .textPanel div.content {
+    flex-direction: column;
+    height: 313px;
+}
+
+.reserveSec .guidedBySection .textPanel div.content h2 {
+    font-size: 36px;
+}
+
+.reserveSec .guidedBySection .textPanel .subContent {
+    flex-direction: column;
+    gap: 25px;
+}
+
+.reserveSec .guidedBySection .textPanel a.buttonA {
+    background-color: #808CFD;
+    text-align: center;
+}
+
+.subContent div {
+    border-bottom: 1px solid #000;
+}
+
+.reserveSec .callToActionSection {
+    padding: 151px 250px;
+}
+
+
+@media (min-width: 800px) and (max-width:1279px) {
+    h1 {
+        font-size: 71px;
+        letter-spacing: -4px;
+    }
+
+    .guidedBySection {
+        order: -1;
+    }
+
+    main .textPanel {
+        padding: 20px;
+        gap: 48px;
+    }
+
+    .discoverPotentialSection .textPanelContainer {
+        width: 50%;
+        gap: 0;
+    }
+
+    .discoverPotentialSection .image {
+        width: 50%;
+    }
+
+    .textPanelContainer .textPanel:first-child {
+        padding: 15px 20px;
+    }
+
+    .textPanelContainer .textPanel p {
+        letter-spacing: -.5px;
+        width: 100%;
+    }
+
+    .callToActionSection {
+        padding: 135px 70px;
+    }
+
+
+    .aboutSec .heroSection .image {
+        width: 50% !important;
+    }
+
+    .aboutSec .heroSection .textPanel {
+        width: calc(50% - 40px) !important;
+    }
+
+    .aboutSec .heroSection .textPanel h2 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .aboutSec .heroSection .textPanel .body {
+        gap: 8px;
+    }
+
+    .aboutHS .textPanel .body h5 {
+        font-size: 20px;
+    }
+
+    .aboutSec .heroSection .textPanel .body p {
+        font-size: 15px;
+    }
+
+    .reserveSec .guidedBySection .textPanel {
+        padding: 20px;
+    }
+
+    .reserveSec .callToActionSection {
+        padding: 153px 46px;
+    }
+
+}
+
+@media (max-width: 799px) {
+    header {
+        padding: 92px 20px 16px;
+    }
+
+    h1 {
+        font-size: 37px;
+        letter-spacing: -2px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+
+    .navContents a.plus {
+        display: block;
+    }
+
+    .navContents .links {
+        display: none;
+    }
+
+    .navContents .collapse,
+    .navContents .exit {
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        top: 72.8px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .navContents .collapse{
+        animation: slideDownFadeIn 0.5s ease-out forwards;
+    }
+
+    .navContents .exit{
+        animation: slideDownFadeOut 0.5s ease-out forwards;
+    }
+
+
+
+    /* .navContents .links {
+        display: none;
+    }
+
+    .navContents .collapse {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        top: 72.8px;
+        left: 0;
+    } */
+
+    .collapse a,
+    .exit a {
+        padding: 20px;
+        font-size: 30px;
+        align-self: flex-start;
+        width: 100%;
+        background-color: white;
+        border: 1px solid #000;
+        border-right: none;
+        border-left: none;
+        letter-spacing: -1px;
+    }
+
+    .collapse a.buttonA,
+    .exit a.buttonA {
+        border-radius: 0;
+        color: white;
+        background-color: #808CFD;
+    }
+
+    main>* {
+        flex-direction: column;
+    }
+
+    main div>* {
+        width: 100% !important;
+    }
+
+    main .textPanel {
+        width: calc(100% - 40px) !important;
+        gap: 6px;
+    }
+
+    main .textPanel h2 {
+        font-size: 25px;
+        letter-spacing: -1px;
+    }
+
+    main .textPanelContainer.textPanel {
+        width: 100% !important;
+    }
+
+    main .textPanelContainer.textPanel a.buttonA {
+
+        text-align: center;
+        width: calc(100% - 34px) !important;
+    }
+
+    main a.buttonA {
+        width: max-content !important;
+    }
+
+    main .heroSection .textPanel,
+    main .guidedBySection .textPanel {
+        padding: 20px 20px 30px;
+    }
+
+    .guidedBySection .shorterP p {
+        margin: 0;
+    }
+
+    .guidedBySection .image {
+        order: -1;
+    }
+
+    .guidedBySection {
+        order: -1;
+    }
+
+    .discoverPotentialSection .image {
+        order: -1;
+    }
+
+    .callToActionSection {
+        padding: 120px 20px;
+    }
+
+    .callToActionSection .callToAction h3 {
+        font-size: 42px;
+    }
+
+    .footerContent,
+    .footerHeader,
+    .footerBottom {
+        flex-direction: column;
+    }
+
+    .footerContent {
+        gap: 80px;
+    }
+
+    .footerHeader .logoContainer {
+        width: 150px;
+        height: 89.07px;
+    }
+
+    .footerBottom {
+        gap: 40px;
+    }
+
+    .aboutSec .heroSection .image {
+        order: -1;
+        height: 225px;
+    }
+
+
+    .aboutSec .aboutHS .textPanel {
+        gap: 56px;
+    }
+
+    .aboutSec .aboutHS2 .textPanel {
+        gap: 40px;
+    }
+
+    .aboutSec .aboutHS .textPanel h2 {
+        width: 80% !important;
+    }
+
+    .aboutSec .aboutHS2 .textPanel h2 {
+        width: 50% !important;
+    }
+
+    .aboutSec .heroSection .textPanel .body {
+        gap: 8px;
+    }
+
+    .aboutSec .imgContainer img:last-child {
+        display: block;
+    }
+
+    .aboutSec .imgContainer img:first-child {
+        display: none;
+    }
+
+
+    .reserveSec .guidedBySection .textPanel {
+        padding: 20px;
+    }
+
+    .reserveSec .callToActionSection {
+        padding: 120px 20px;
+    }
+
+    .reserveSec .guidedBySection .textPanel {
+        height: 380px;
+    }
+
+    .reserveSec .guidedBySection .textPanel a.buttonA {
+        width: calc(100% - 34px) !important;
+    }
+
+    .reserveSec .callToActionSection .callToAction h3 {
+        font-size: 46px;
+    }
+}
