@@ -37,7 +37,7 @@
 
     100% {
 
-       max-height: 0;
+        max-height: 0;
     }
 }
 
@@ -107,7 +107,7 @@ nav {
     background-color: #E9ECFF;
     width: calc(100% - 40px);
     border-bottom: 1px solid #000;
-    
+
 }
 
 .navContents {
@@ -414,11 +414,11 @@ footer .footerContent .footerBottom {
 
 .aboutHS .image {
     width: 33.3333%;
-    height: 480px;
+    min-height: 480px;
 }
 
 .aboutHS2 .image {
-    height: 480px;
+    min-height: 480px;
 }
 
 .aboutSec .heroSection .image img {
@@ -430,19 +430,29 @@ footer .footerContent .footerBottom {
 }
 
 .aboutSec .imgContainer {
+    position: relative;
     width: 100%;
-    height: 480px;
+    min-height: 480px;
+
 }
 
 .aboutSec .imgContainer img {
     width: 100%;
-    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-height: 480px;
 }
 
-.aboutSec .imgContainer img:last-child {
-    display: none;
+.aboutSec .imgContainer h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 20px 20px;
+    width: 45% !important;
+    color: #fff;
+    font-size: 48px;
+    line-height: 91%;
 }
-
 
 .aboutSec .callToActionSection {
     background-color: #E9ECFF;
@@ -543,6 +553,10 @@ footer .footerContent .footerBottom {
         gap: 8px;
     }
 
+    .aboutSec .imgContainer h2 {
+        width: 80% !important;
+    }
+
     .aboutHS .textPanel .body h5 {
         font-size: 20px;
     }
@@ -597,28 +611,13 @@ footer .footerContent .footerBottom {
         overflow: hidden;
     }
 
-    .navContents .collapse{
+    .navContents .collapse {
         animation: slideDownFadeIn 0.5s ease-out forwards;
     }
 
-    .navContents .exit{
+    .navContents .exit {
         animation: slideDownFadeOut 0.5s ease-out forwards;
     }
-
-
-
-    /* .navContents .links {
-        display: none;
-    }
-
-    .navContents .collapse {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        width: 100%;
-        top: 72.8px;
-        left: 0;
-    } */
 
     .collapse a,
     .exit a {
@@ -723,6 +722,7 @@ footer .footerContent .footerBottom {
     .aboutSec .heroSection .image {
         order: -1;
         height: 225px;
+        width: 100%;
     }
 
 
@@ -746,14 +746,11 @@ footer .footerContent .footerBottom {
         gap: 8px;
     }
 
-    .aboutSec .imgContainer img:last-child {
-        display: block;
+    .aboutSec .imgContainer h2 {
+        width: calc(100% - 40px) !important;
+        padding: 0 20px 20px;
+        font-size: 30px;
     }
-
-    .aboutSec .imgContainer img:first-child {
-        display: none;
-    }
-
 
     .reserveSec .guidedBySection .textPanel {
         padding: 20px;
