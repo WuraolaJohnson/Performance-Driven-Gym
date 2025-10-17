@@ -231,6 +231,11 @@ main .textPanel {
     width: calc(100% - 11px);
 }
 
+main .textPanel a.buttonA {
+    width: max-content;
+}
+
+
 
 .guidedBySection {
     gap: 1px;
@@ -273,6 +278,12 @@ main .textPanel {
 
 .textPanelContainer .textPanel:last-child {
     border-bottom: none;
+    flex-grow: 1;
+}
+
+.textPanelContainer .textPanel:last-child a {
+    align-content: center;
+    height: 100%;
 }
 
 .textPanelContainer .textPanel h3 {
@@ -286,7 +297,7 @@ main .textPanel {
 
 .discoverPotentialSection .image {
     width: 66.6667%;
-    max-height: 600px;
+    max-height: 565px;
 }
 
 .discoverPotentialSection .image img {
@@ -497,6 +508,12 @@ footer .footerContent .footerBottom {
     padding: 151px 250px;
 }
 
+@media (min-width:1491.5px) {
+    .guidedBySection .shorterP p {
+        margin-bottom: 0;
+    }
+
+}
 
 @media (min-width: 800px) and (max-width:1279px) {
     h1 {
