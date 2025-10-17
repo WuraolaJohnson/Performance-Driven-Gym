@@ -21,7 +21,7 @@ toggle.addEventListener("click", function (e) {
     if (e.target.src.endsWith(addPng)) {
         e.target.src = "assets/image/remove.png";
 
-        navButtonA.innerHTML = "reserve your classes";
+        navButtonA.innerHTML = "reserve your class";
 
         navLinks.classList.add("collapse");
         navLinks.classList.remove("exit");
